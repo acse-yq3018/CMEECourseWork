@@ -1,0 +1,15 @@
+#1
+wc -l ../Data/*.fasta
+
+#2
+tail -n +2 ../Data/E.coli.fasta
+
+#3
+tail -n +2 ../Data/E.coli.fasta |awk '{printf $0}'| wc -m
+
+#4
+tail -n +2 ../Data/E.coli.fasta |awk '{printf $0}'| grep -o ATGC|wc -l
+
+#5
+awk 'BEGIN{printf "%.2f%%\n", '`tail -n +2 ../Data/E.coli.fasta | awk '{printf $0}'| grep -o "A\|T" | wc -l`' / '`tail -n +2 ../Data/E.coli.fasta |awk '{printf $0}'| grep -o "G\|C" | wc -l`' * 100}'
+
