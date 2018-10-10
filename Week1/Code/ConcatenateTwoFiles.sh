@@ -2,7 +2,7 @@
 # Author: Yuxin Qin yq3018@imperial.ac.uk
 # Script: ConcatenateTwoFiles.sh
 # Desc: Put two files into a file
-# Arguments: none
+# Arguments: bash ConcatenateTwoFiles.sh ../Sandbox/File1 ../Sandbox/File2 ../Result/File3
 # Date: Oct 2018
 
 #Overwrite file$3 with file$1. 

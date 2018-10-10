@@ -2,7 +2,7 @@
 # Author: Yuxin Qin yq3018@imperial.ac.uk
 # Script: variables.sh
 # Desc: show the use of variables and read multiple values
-# Arguments: none
+# Arguments: bash variables.sh
 # Date: Oct 2018
 
 # Shows the use of variables

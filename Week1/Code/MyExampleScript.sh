@@ -2,7 +2,7 @@
 # Author: Yuxin Qin yq3018@imperial.ac.uk
 # Script: MyExampleScript.sh
 # Desc: print hello $user in the terminal
-# Arguments: none
+# Arguments: bash MyExampleScript.sh
 # Date: Oct 2018
 
 msg1="Hello"

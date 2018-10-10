@@ -2,7 +2,7 @@
 # Author: Yuxin Qin yq3018@imperial.ac.uk
 # Script: CountLines.sh
 # Desc: Count the number of lines in a file
-# Arguments: none
+# Arguments: bash CountLines.sh ../Sandbox/test.txt
 # Date: Oct 2018
 
 
