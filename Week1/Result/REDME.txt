@@ -1,4 +1,5 @@
 CMEECoursework-Week1
+Author: Yuxin Qin
 
 Files List:
 ------------------
@@ -60,65 +61,4 @@ Files List:
     │   └── File4.txt
     └── TiffSample.tiff
 
-
-
-
-
-Things to remember:
--------------------
-Ctrl + D : Exit the current shell
-pwd : show the current directory
-cd / : go to the root directory
-cd ~ : go to the home directory
-wc FILENAME : count the number of lines and words in a file
-sort : sort the lines of a file and print result
-sort -n  : sequence the file accoding the numeric value instead of alphabetic
-cat FILENAME : print the file on the screen
-echo "MY STRING" : print a string
-history : show the last commands you typed
-ls -S : list all files, ordered by size
-ls -l : list all files, one file per line
-ls -t : list all files, ordered by modification time
-mkdir -p : produce directories more than one at the same time. For example, mkdir -p Week1/{Data,Code,Sandbox}
-? : anything single character
->  :  redirect output from a command to a file on disk. If the file already exists, it wil be overwritten.
->>  :  add the output from a command to a file on disk. If the file does not exist, it will be created.
-grep -i : make it case-insentitive
-grep -w : match only full word
-grep -A 10 : show 10 lines after match 
-grep -B 10 : show 10 lines before match
-grep -n : show the line number match
-grep -v : to print all lines do not match
-find -iname : ignore cases
-find -maxdepth : exclude certain files
-find -type : find a type of file
-find -type f : find a file
-find -type d : find a directory
-find -exec : execute the following command unitl the ;
-{} : run the file accordingly one by one. Represent the files under the directory
-\  : inhibit the function of the following character, cannot add space between
-| : made the result of the left hand side to be the input of right and side
-\n : start a new line
-\t : tab
-
-
-
-Things might be useful in the future:
-------------------
-Sending text to terminal in VSCode: 
-Enter ctrl+shift+P in vscode. This will bring up the command "palette" box at the top of the editor. 
-There, search for "keyboard", which will bring up a few options. from the list, open "Preferences:Open Keyboard Shortcuts File" (both are json files). 
-Place your key bindings in this file to overwrite the defaults (as it says at the top!). Then, add the following to the json file:
-    {
-        "key": "ctrl+enter",
-        "command": "workbench.action.terminal.runSelectedText"
-    }
-
-Push repository to github:
-git add -A
-git commit -m "WHATEVER YOU WANT TO WRITE"
-git push origin master
-
-
-git clone website: get things from git repository
 

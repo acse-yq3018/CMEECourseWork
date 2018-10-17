@@ -1,4 +1,5 @@
 CMEECoursework-Week2
+Author: Yuxin Qin
 
 Files List:
 ------------------
@@ -39,28 +40,3 @@ Files List:
     ├── testout.txt
     ├── testp.p
     └── test.txt
-
-
-
-
-
-
-Things to remember:
--------------------
-% : set a format
-%d : make the input to be a integer
-x % 2 : the remain of x/2
-[] : list, most versatile, can contain coupound data
-() : tuple, like list, but immutable,read only
-{} : dictionary
-
-
-
-
-
-
-Things might be useful in the future:
-------------------
-
-
-
