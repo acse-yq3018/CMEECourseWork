@@ -1,3 +1,11 @@
+#!/usr/bin/env python3
+
+"""how to readlines and output lines in python"""
+
+__appname__ = 'basix_io.py'
+__author__ = 'Yuxin Qin (yq3018@imperial.ac.uk)'
+__version__ = '0.0.1'
+
 #############################
 # FILE INPUT
 #############################

@@ -1,3 +1,16 @@
+#!/usr/bin/env python3
+
+"""clarify foo function"""
+
+__appname__ = 'cfexercises2.py'
+__author__ = 'Yuxin Qin (yq3018@imperial.ac.uk)'
+__version__ = '0.0.1'
+
+#################################################
+
+import sys
+
+#Functions
 def foo1(x):
     return x ** 0.5
 
@@ -28,4 +41,15 @@ def foo5(x): # a recursive function
         return 1
     return x * foo5(x - 1)
 
-foo5(10)
+def main(argv):
+    """Test functions"""
+    print(foo1(2))
+    print(foo2(5,8))
+    print(foo3(4,6,8))
+    print(foo4(5))
+    print(foo5(5))
+    return 0
+
+if(__name__ == "__main__"):
+    status = main(sys.argv)
+    sys.exit(status)

@@ -1,3 +1,13 @@
+#!/usr/bin/env python3
+
+"""clarify function of range and while"""
+
+__appname__ = 'cfexercises1.py'
+__author__ = 'Yuxin Qin (yq3018@imperial.ac.uk)'
+__version__ = '0.0.1'
+
+###############################################
+
 for i in range(3, 17):
     print('hello')
 

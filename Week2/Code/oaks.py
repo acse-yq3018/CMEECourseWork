@@ -1,3 +1,13 @@
+#!/usr/bin/env python3
+
+"""clarify list comprehension and loops"""
+
+__appname__ = 'oaks.py'
+__author__ = 'Yuxin Qin (yq3018@imperial.ac.uk)'
+__version__ = '0.0.1'
+
+########################################################
+
 ## Finds just those taxa that are oak trees from a list of species
 
 taxa = [ 'Quercus robur',

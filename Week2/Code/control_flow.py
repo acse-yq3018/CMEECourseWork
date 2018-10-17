@@ -1,10 +1,13 @@
 #!/usr/bin/env python3
 
 """Some functions exemplifying the use of control statements"""
-#docstrings are considered part of the running code(normal comments are stripped).Hence, you can access your docstrings at run time.
-
-__author__ = 'YuxinQin (yq3018@email.address)'
+#docstrings are considered part of the running code (normal comments are
+#stripped). Hence, you can access your docstrings at run time.
+__appname__ = 'control_flow.py'
+__author__ = 'Yuxin Qin (yq3018@imperial.ac.uk)'
 __version__ = '0.0.1'
+
+####################################################################
 
 ## imports ##
 import sys
@@ -63,5 +66,5 @@ def main(argv):
     return 0
 
 if (__name__ == "__main__"):
-    status = ma/in(sys.argv)
+    status = main(sys.argv)
     sys.exit(status)

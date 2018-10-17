@@ -1,9 +1,13 @@
 #!/usr/bin/env python3
 
-__appname__ = '[application name here]'
+"""This is just a boilerplate"""
+
+__appname__ = 'boilerplate'
 __author__ = 'YuxinQin (yq3018@email.address)'
 __version__ = '0.0.1'
 __license__ = "License for this code/program"
+
+##################################################
 
 ## imports ##
 import sys # module to interface our program with the operating system

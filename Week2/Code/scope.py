@@ -1,4 +1,14 @@
-## Try this first
+#!/usr/bin/env python3
+
+"""clarify function def"""
+
+__appname__ = 'scope.py'
+__author__ = 'Yuxin Qin (yq3018@imperial.ac.uk)'
+__version__ = '0.0.1'
+
+##############################################
+
+#Try this first
 
 _a_global = 10
 

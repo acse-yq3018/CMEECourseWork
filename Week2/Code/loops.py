@@ -1,3 +1,13 @@
+#!/usr/bin/env python3
+
+"""clarify loops"""
+
+__appname__ = 'loops.py'
+__author__ = 'Yuxin Qin (yq3018@imperial.ac.uk)'
+__version__ = '0.0.1'
+
+###################################################
+
 # FOR loops in Python
 for i in range(5):
     print(i)

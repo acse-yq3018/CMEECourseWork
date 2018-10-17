@@ -119,3 +119,6 @@ git add -A
 git commit -m "WHATEVER YOU WANT TO WRITE"
 git push origin master
 
+
+git clone website: get things from git repository
+
