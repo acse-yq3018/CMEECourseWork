@@ -1,7 +1,8 @@
 \documentclass[12pt]{article}
-\title{TAutoCorr}
-\author{Yuxin Qin}
-\date{Oct 2018}
+  \usepackage{graphicx}
+  \title{TAutoCorr}
+  \author{Yuxin Qin}
+  \date{Oct 2018}
 \begin{document}
   \maketitle
 
@@ -13,12 +14,19 @@
     Then I used "pearson method" of cor() function in R to calculate the coefficients and p-value. Pearson correlation coefficient (PCC) is also referred to as Pearson's r, which is a measure of the linear correlation between two variables X and Y. 
 
   \section{Discussion}
+  \begin{figure}
+	\centering
+	\includegraphics[scale=.3]{../Result/TAutoCorrP.png}
+	\caption{Scatter plot of temperature in each year}
+  \end{figure}
+    
     It is unable to observe the trend of temperature by eye via the scatterpoint. 
     The Pearson's r value calculated via cor1() in R is 0.33. The positive of r indicated temperature of successive year has the positive relationship with the temperature of this year. 
     The P-value is 5e-04, which is smaller than 0.05, indicating temperatures of one year significantly correlated with the successive years, across years in a given location.
     The positive pearson r value and the P-value smaller than 0.05 in somehow implicates the increasing temperature in West during these year.
 
-  \section{Results}
+  \section{Conclusion}
     In conclusion, temperatures of one year significantly correlate with the successice years across years in a given location. 
   
 \end{document}\grid
+\grid

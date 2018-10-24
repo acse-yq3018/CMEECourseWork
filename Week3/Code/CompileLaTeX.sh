@@ -8,7 +8,8 @@
 ## Create a pdf file
 basename=`basename $1 .tex`
 pdflatex $1
-evince ${basename}.pdf 
+mv ${basename}.pdf ../Result
+evince ../Result/${basename}.pdf 
 
 ## Cleanup
 rm *.aux
