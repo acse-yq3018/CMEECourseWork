@@ -8,7 +8,9 @@
 load("../Data/KeyWestAnnualMeanTemperature.RData")
 
 # plot the data
+png('../Result/TAutoCorrP.png')
 plot(ats$Year, ats$Temp)
+dev.off()
 
 # calculate the coefficient of keywest annual mean temperature
 cor1 <- cor(ats[1:99,2], ats[2:100,2], method = "pearson")
@@ -27,3 +29,4 @@ print("Pearson r value is")
 print(cor1)
 print("P-value is")
 print(p)
+
