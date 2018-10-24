@@ -1,0 +1,48 @@
+\documentclass[12pt]{article}
+\title{A Simple Document}
+\author{Your Name}
+\date{}
+\begin{document}
+  \maketitle
+Terminal
+top : to see the CPU status
+
+R
+> : R user prompt
+ls()
+rm('a', 'b') : remove variables a and b
+rm(list=ls()) : remove all variables
+getwd()
+setwd('Path')
+q() : quit R
+?Command : search pricisely
+??Keyword: search widely
+sqrt() : square toot
+is.vevor() : check if it is a vector
+var() : calculate the variace in a vector
+length()
+prod() : multiply every number in vector
+prod(v+1) : every number in vector plus 1 first, then multiply
+& : and 
+$ : or
+! : not
+v[4] : get the forth element of vector v
+NA : not available
+NaN : not a number, nonsense values like 0/0
+NULL : not set
+
+
+Four types of variables in R:
+	integer
+	float : numeric 
+	string : character, text
+	boolean : logical, true or false
+To check the data type:
+class() : check vector
+is.na() : check variable NA or not
+is.nan() : check variable NaN or not
+is.infinite() 
+is.finite()
+
+
+
