@@ -1,0 +1,26 @@
+CMEECoursework-Week7
+Author: Yuxin Qin
+
+Files List:
+------------------
+.
+├── Code
+│   ├── DrawFW.py           draw the foodweb
+│   ├── fmr.R               Rscript
+│   ├── LV1.py              draw Lotka-Volterra model
+│   ├── LV2.py              draw Lotka-Volterra model with system argument
+│   ├── profileme2.py       test the function of profile
+│   ├── profileme.py        test the function of profile with an improved script"
+│   ├── regexs.py           learn regexs
+│   ├── run_fmr_R.py        use python to run fmr.R
+│   ├── runLV.py            run LV1 and LV2 at the same time
+│   ├── TestR.py            test how to use python to run R
+│   ├── TestR.R             Rscript
+│   ├── timetime.py         test the function of timeit
+│   └── using_os.py         use python to run subprocess
+├── Data
+│   └── NagyEtAl1999.csv
+├── README
+├── Result
+└── Sandbox
+    └── SampleCode1.0
