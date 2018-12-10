@@ -6,11 +6,14 @@
  * LaTeX
 
 # Week2
- * Biological computing in Python
+ * Biological computing in Python 1
 
 # Week3
  * Biological computing in R
  * Data management, exploration and visualization
+ 
+# Week7
+ * Biological computing in Python 2
 ----------------------------------
 
 Author: Yuxin Qin (yq3018@gimperial.ac.uk)
