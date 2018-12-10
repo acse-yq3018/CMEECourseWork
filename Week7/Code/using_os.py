@@ -65,3 +65,13 @@ for (dir, subdir, files) in subprocess.os.walk(home):
 
 print("Directories in your home/ that start with either an upper or lower case 'C'")
 print(DirsStartingWithCc)
+
+
+print("summary")
+
+C = len(FilesDirsStartingWithC)
+Cc = len(FilesDirsStartingWithCc)
+DCc = len(DirsStartingWithCc)
+print("The number of files and directories in your home/ that start with an uppercase 'C' is", C)
+print("The number of files and directories in your home/ that start with an uppercase or lowercase 'C' is", Cc)
+print("The number of directories in your home/ that start with an uppercase or lowercase 'C' is", DCc)

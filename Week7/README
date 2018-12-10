@@ -5,10 +5,13 @@ Files List:
 ------------------
 .
 ├── Code
+│   ├── blackbirds.py       capture specific things in re.findall and present neatly
 │   ├── DrawFW.py           draw the foodweb
 │   ├── fmr.R               Rscript
 │   ├── LV1.py              draw Lotka-Volterra model
 │   ├── LV2.py              draw Lotka-Volterra model with system argument
+│   ├── LV3.py              draw Lotka-Volterra model with different formula
+│   ├── LV4.py              draw Lotka-Volterra model with another different formula
 │   ├── profileme2.py       test the function of profile
 │   ├── profileme.py        test the function of profile with an improved script"
 │   ├── regexs.py           learn regexs
@@ -19,8 +22,17 @@ Files List:
 │   ├── timetime.py         test the function of timeit
 │   └── using_os.py         use python to run subprocess
 ├── Data
-│   └── NagyEtAl1999.csv
+│   ├── blackbirds.txt
+│   ├── NagyEtAl1999.csv
+│   ├── QMEE_Net_Mat_edges.csv
+│   └── QMEE_Net_Mat_nodes.csv
 ├── README
 ├── Result
+│   └── README
+├── Data
+│   ├── blackbirds.txt
+│   ├── NagyEtAl1999.csv
+│   ├── QMEE_Net_Mat_edges.csv
+│   └── QMEE_Net_Mat_nodes.csv
 └── Sandbox
     └── SampleCode1.0

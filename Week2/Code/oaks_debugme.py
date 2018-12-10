@@ -28,6 +28,7 @@ def is_an_oak(name):
 
 # Define the main function
 def main(argv):
+    """write all the oaks into a csv"""
     f = open('../Data/TestOaksData.csv','r')
     g = open('../Data/JustOaksData.csv','w')
     
