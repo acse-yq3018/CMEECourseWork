@@ -9,7 +9,7 @@ load("../Data/KeyWestAnnualMeanTemperature.RData")
 
 # plot the data
 png('../Result/TAutoCorrP.png')
-plot(ats$Year, ats$Temp)
+plot(ats$Year, ats$Temp, type = "o", cex = 0.3)
 dev.off()
 
 # calculate the coefficient of keywest annual mean temperature

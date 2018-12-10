@@ -5,11 +5,13 @@
 # Arguments: bash CompileLaTeX.sh FirstExample.tex
 # Date: Oct 2018
 
-## Create a pdf file
-basename=`basename $1 .tex`
-pdflatex $1
-mv ${basename}.pdf ../Result
-evince ../Result/${basename}.pdf 
+# create the figure
+Rscript TAutoCorr.R
+
+## Create a pdf file`
+pdflatex TAutoCorr.tex
+mv TAutoCorr.pdf ../Result
+evince ../Result/TAutoCorr.pdf 
 
 ## Cleanup
 rm *.aux

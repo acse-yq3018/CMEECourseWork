@@ -31,7 +31,7 @@ input <- paste("../Data/", filename, sep="")
 
 # the name of the output file
 name <- unlist(strsplit(x=filename, split="\\."))[1]
-newname <- paste("../Data/", name, "_treeheights.csv", sep="")
+newname <- paste("../Result/", name, "_treeheights.csv", sep="")
 
 # read the data
 MyData <- read.csv(input)

@@ -40,7 +40,7 @@ cal <- function(x,y) {
   return(c(intercept, slope, fvalue, rsquared,pvalue))
 }
 
-modelfit <- ddply(MyDF, c("Predator.lifestage", "Location"), summarise,
+modelfit <- ddply(MyDF, c("Type.of.feeding.interaction", "Predator.lifestage", "Location"), summarise,
                   Intercept = cal(Predator.mass, Prey.mass)[1],
                   Slope = cal(Predator.mass, Prey.mass)[2],
                   fvalue = cal(Predator.mass, Prey.mass)[3],
