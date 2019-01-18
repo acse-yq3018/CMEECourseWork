@@ -9,11 +9,11 @@ Note that:
 
 ======================================================================
 ======================================================================
-Your Git repo size this week is about 1.66 MiB on disk 
+Your Git repo size this week is about 2.09 MiB on disk 
 
 PART 1: Checking project workflow...
 
-Found the following directories in parent directory: Week1, Assessment, Week2, Week4, .git, Week3
+Found the following directories in parent directory: Week1, Week7, Assessment, Week2, Mainproject, .git, Week3
 
 Found the following files in parent directory: .gitignore, README.md
 
@@ -41,11 +41,14 @@ Printing contents of README.md:
  * LaTeX
 
 # Week2
- * Biological computing in Python
+ * Biological computing in Python 1
 
 # Week3
  * Biological computing in R
  * Data management, exploration and visualization
+ 
+# Week7
+ * Biological computing in Python 2
 ----------------------------------
 
 Author: Yuxin Qin (yq3018@gimperial.ac.uk)
@@ -58,7 +61,7 @@ Date: 2018-2019
 ======================================================================
 Looking for the weekly directories...
 
-Found 4 weekly directories: Week1, Week2, Week3, Week4
+Found 4 weekly directories: Week1, Week2, Week3, Week7
 
 The Week3 directory will be assessed 
 
@@ -71,16 +74,69 @@ Assessing WEEK3...
 
 Found the following directories: Code, Result, Data, Sandbox
 
-Found the following files: 
+Found the following files: README.txt
 
 Checking for readme file in weekly directory...
 
-README file missing, 1 pt deducted
+Found README in parent directory, named: README.txt
 
-Current Points = 99
+Printing contents of README.txt:
+**********************************************************************
+CMEECoursework-Week3
+Author: Yuxin Qin
+
+Files List:
+------------------
+.
+├── Code
+│   ├── apply1.R                clarify the apply function
+│   ├── apply2.R                clarify the apply function
+│   ├── basic_io.R              read and write csv in R
+│   ├── boilerplate.R           it is just a boilerplate to print something
+│   ├── break.R                 clarify the break function in R
+│   ├── browse.R                clarify the browse function
+│   ├── CompileLaTeX.sh         create a pdf in LaTeX and clean the meaningless files produced
+│   ├── control.R               some code exemplyfying control flow constructs in R
+│   ├── DataWrang.R             wrangle the data using reshape
+│   ├── DataWrangTidy.R         wrangle the data using dplyr and tidyr
+│   ├── get_TreeHeight.py       calculate tree-height via python
+│   ├── get_TreeHeight.R        calculate treeheight automatically with any input files and output different files
+│   ├── Girko.R                 explore matrix plot
+│   ├── maps.R                  maps the species on the map
+│   ├── next.R                  clarify the function of next in R
+│   ├── plotLin.R               plot a line
+│   ├── PP_Lattice.R            create 3 plots and generate a csv
+│   ├── PP_Regress_loc.R        calculate regression results sorting by location
+│   ├── PP_Regress.R            generate the plot and calculate regression results sorting by type of feeding
+│   ├── preallocate.R           clarify the function of system.time
+│   ├── run_get_TreeHeight.sh   test whether the get_TreeHeight works
+│   ├── sample.R                clarify how to use random number
+│   ├── TAutoCorr.R             calculate the coefficient and p-value
+│   ├── TAutoCorr.tex           the LaTeX file of TAutoCorr.pdf
+│   ├── TreeHeight.R            calculate the treeheight            
+│   ├── try.R                   clarify the try function to catch b
+│   ├── Vectorize1.R            clarify the function of system.time
+│   ├── Vectorize1.py           vectorize1 written in python
+│   └── Vectorize2.R            vectorize and improve the script
+├── Data
+│   ├── EcolArchives-E089-51-D1.csv
+│   ├── GPDDFiltered.RData
+│   ├── KeyWestAnnualMeanTemperature.RData
+│   ├── PoundHillData.csv
+│   ├── PoundHillMetaData.csv
+│   ├── trees.csv
+│   └── trees_treeheights.csv
+├── Result
+│   └── README
+└── Sandbox
+    ├── Data_visualization.R
+    └── MyRNotes.R
+
+**********************************************************************
 
 Found following files in results directory: README.txt...
-Found 27 code files: browse.R, PP_Regress.R, maps.R, apply1.R, sample.R, run_get_TreeHeight.sh, boilerplate.R, TreeHeight.R, PP_Lattice.R, next.R, Girko.R, Vectorize1.R, break.R, compileLaTeX.sh, plotLin.R, basic_io.R, try.R, apply2.R, get_TreeHeight.R, TAutoCorr.R, Vectorize2.R, DataWrangTidy.R, preallocate.R, PP_Regress_loc.R, DataWrang.R, TAutoCorr.tex, control.R
+
+Found 29 code files: browse.R, PP_Regress.R, maps.R, apply1.R, sample.R, run_get_TreeHeight.sh, get_TreeHeight.py, boilerplate.R, TreeHeight.R, PP_Lattice.R, next.R, Girko.R, Vectorize1.R, break.R, compileLaTeX.sh, plotLin.R, basic_io.R, Vectorize1.py, try.R, apply2.R, get_TreeHeight.R, TAutoCorr.R, Vectorize2.R, DataWrangTidy.R, preallocate.R, PP_Regress_loc.R, DataWrang.R, TAutoCorr.tex, control.R
 
 ======================================================================
 Testing script/code files...
@@ -139,7 +195,7 @@ debug: browser()
 
 Code ran without errors
 
-Time consumed = 0.11258s
+Time consumed = 0.11247s
 
 ======================================================================
 Inspecting script file PP_Regress.R...
@@ -263,7 +319,7 @@ Output (only first 500 characters):
 
 Code ran without errors
 
-Time consumed = 0.31768s
+Time consumed = 0.33137s
 
 ======================================================================
 Inspecting script file apply1.R...
@@ -298,18 +354,18 @@ Testing apply1.R...
 Output (only first 500 characters): 
 
 **********************************************************************
- [1]  0.49123222 -0.10800191 -0.31668852  0.55854410  0.23772623  0.28008181
- [7]  0.31493957 -0.17551023 -0.04132467  0.69006091
- [1] 1.2647976 0.8804153 0.3222155 0.6489509 0.6593533 0.8301765 1.0246015
- [8] 0.8767312 1.6764473 0.5198961
- [1] -0.038190068  0.301076453  0.470059915  0.234214668 -0.222556681
- [6] -0.005719434  0.476368456  0.057245270  0.141818189  0.516742754
+ [1]  0.37728356  0.35050049 -0.04603438 -0.28101835  0.25512452 -0.11717873
+ [7] -0.15959208 -0.24887573 -0.08653883  0.53621291
+ [1] 0.7929292 0.9262007 1.2090033 0.8604972 1.3743261 2.1800055 0.6260826
+ [8] 0.3559496 0.8422612 0.2745229
+ [1]  0.20924956 -0.19034673 -0.38308381  0.39120704  0.15623670  0.04035632
+ [7]  0.12783860  0.39782392 -0.10117242 -0.06822578
 
 **********************************************************************
 
 Code ran without errors
 
-Time consumed = 0.06438s
+Time consumed = 0.06853s
 
 ======================================================================
 Inspecting script file sample.R...
@@ -347,21 +403,21 @@ Testing sample.R...
 Output (only first 500 characters): 
 
 **********************************************************************
-[1] "Mean of this sample was: -0.209441746417092"
-[1] "Mean of this sample was: -0.0783982954864118"
-[1] "Mean of this sample was: -0.318878375004216"
-[1] "Mean of this sample was: -0.152115813573391"
-[1] "Mean of this sample was: -0.0565738469319862"
-[1] "Mean of this sample was: -0.0709454651117968"
-[1] "Mean of this sample was: -0.376268678429435"
-[1] "Mean of this sample was: -0.011844010154648"
-[1] "Mean of this sample was: -0.0117333462797439"
-[1] "Mean of this sample was: 0.117419616250037
+[1] "Mean of this sample was: -0.16211053262411"
+[1] "Mean of this sample was: -0.0425934338435314"
+[1] "Mean of this sample was: 0.145898851131917"
+[1] "Mean of this sample was: 0.0868639794095873"
+[1] "Mean of this sample was: -0.0969862776918179"
+[1] "Mean of this sample was: -0.331421648309592"
+[1] "Mean of this sample was: -0.0720792843155478"
+[1] "Mean of this sample was: 0.00535856633629084"
+[1] "Mean of this sample was: -0.0431187893682919"
+[1] "Mean of this sample was: 0.0057631946912065
 **********************************************************************
 
 Code ran without errors
 
-Time consumed = 0.10820s
+Time consumed = 0.10890s
 
 ======================================================================
 Inspecting script file run_get_TreeHeight.sh...
@@ -374,7 +430,10 @@ File contents are:
 # Description: test whether the get_TreeHeight works
 # Date: Oct 2018
 
-Rscript get_TreeHeight.R ../Data/trees.csv**********************************************************************
+Rscript get_TreeHeight.R ../Data/trees.csv
+
+python3 get_TreeHeight.py ../Data/trees.csv
+**********************************************************************
 
 Testing run_get_TreeHeight.sh...
 
@@ -392,7 +451,69 @@ Output (only first 500 characters):
 
 Code ran without errors
 
-Time consumed = 0.08739s
+Time consumed = 0.11854s
+
+======================================================================
+Inspecting script file get_TreeHeight.py...
+
+File contents are:
+**********************************************************************
+#!/usr/bin/env python3
+
+"""calculate treeheight via python"""
+
+__appname__ = 'get_TreeHeight.py'
+__author__ = 'Yuxin Qin (yq3018@imperial.ac.uk)'
+__version__ = '0.0.1'
+
+#import
+import sys
+import csv
+import math
+
+# read and write csv
+f = open(sys.argv[1],'r')
+g = open("../Result/" + sys.argv[1].split('.csv')[0].split('/')[-1] +"_treeheights_py.csv",'w')
+reader=csv.reader(f)
+writer=csv.writer(g)
+
+
+#function
+def main(argv):
+    """calculate tree_height"""
+    for row in reader:
+        if row[0] == 'Species':
+            writer.writerow([row[0],row[1],row[2],"Tree.Height.m"])
+        else:
+            writer.writerow([row[0],row[1],row[2],float(row[1])*math.tan(math.pi/180*float(row[2]))])
+    return 0
+
+if __name__ == "__main__":
+    status = main(sys.argv)
+    sys.exit(status)
+
+f.close()
+g.close()
+**********************************************************************
+
+Testing get_TreeHeight.py...
+
+get_TreeHeight.py is a Python script file;
+ checking for docstrings...
+
+Found one or more doctrings!
+
+Output (only first 500 characters): 
+
+**********************************************************************
+
+**********************************************************************
+
+Encountered error:
+Traceback (most recent call last):
+  File "get_TreeHeight.py", line 15, in <module>
+    f = open(sys.argv[1],'r')
+IndexError: list index out of range
 
 ======================================================================
 Inspecting script file boilerplate.R...
@@ -435,7 +556,7 @@ Output (only first 500 characters):
 
 Code ran without errors
 
-Time consumed = 0.09320s
+Time consumed = 0.09241s
 
 ======================================================================
 Inspecting script file TreeHeight.R...
@@ -499,7 +620,7 @@ Output (only first 500 characters):
 
 Code ran without errors
 
-Time consumed = 0.08233s
+Time consumed = 0.08355s
 
 ======================================================================
 Inspecting script file PP_Lattice.R...
@@ -559,7 +680,7 @@ Output (only first 500 characters):
 
 Code ran without errors
 
-Time consumed = 2.84996s
+Time consumed = 2.93901s
 
 ======================================================================
 Inspecting script file next.R...
@@ -593,7 +714,7 @@ Output (only first 500 characters):
 
 Code ran without errors
 
-Time consumed = 0.08557s
+Time consumed = 0.09235s
 
 ======================================================================
 Inspecting script file Girko.R...
@@ -698,15 +819,15 @@ Output (only first 500 characters):
 
 **********************************************************************
    user  system elapsed 
-  0.076   0.000   0.078 
+  0.080   0.000   0.081 
    user  system elapsed 
-  0.000   0.000   0.002 
+  0.000   0.000   0.001 
 
 **********************************************************************
 
 Code ran without errors
 
-Time consumed = 0.21581s
+Time consumed = 0.22311s
 
 ======================================================================
 Inspecting script file break.R...
@@ -761,7 +882,7 @@ i equals  19
 
 Code ran without errors
 
-Time consumed = 0.08668s
+Time consumed = 0.09152s
 
 ======================================================================
 Inspecting script file compileLaTeX.sh...
@@ -775,11 +896,13 @@ File contents are:
 # Arguments: bash CompileLaTeX.sh FirstExample.tex
 # Date: Oct 2018
 
-## Create a pdf file
-basename=`basename $1 .tex`
-pdflatex $1
-mv ${basename}.pdf ../Result
-evince ../Result/${basename}.pdf 
+# create the figure
+Rscript TAutoCorr.R
+
+## Create a pdf file`
+pdflatex TAutoCorr.tex
+mv TAutoCorr.pdf ../Result
+evince ../Result/TAutoCorr.pdf 
 
 ## Cleanup
 rm *.aux
@@ -793,41 +916,26 @@ Testing compileLaTeX.sh...
 Output (only first 500 characters): 
 
 **********************************************************************
+null device 
+          1 
+[1] "Pearson r value is"
+[1] 0.3261697
+[1] "P-value is"
+[1] 8e-04
 This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex)
  restricted \write18 enabled.
-**
-! End of file on the terminal... why?
-
+entering extended mode
+(./TAutoCorr.tex
+LaTeX2e <2016/02/01>
+Babel <3.9q> and hyphenation patterns for 81 language(s) loaded.
+(/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
+(/usr/share/texlive/texmf-
 **********************************************************************
 
 Encountered error:
-mv: cannot stat '.tex.pdf': No such file or directory
 
-** (evince:13791): WARNING **: Error when getting information for file '/home/mhasoba/Documents/Teaching/IC_CMEE/2018-19/Coursework/StudentRepos/YuxinQin_YQ3018/Week3/Result/.tex.pdf': No such file or directory
-
-** (evince:13791): WARNING **: Error setting file metadata: No such file or directory
-
-** (evince:13791): WARNING **: Error setting file metadata: No such file or directory
-
-** (evince:13791): WARNING **: Error setting file metadata: No such file or directory
-
-** (evince:13791): WARNING **: Error setting file metadata: No such file or directory
-
-** (evince:13791): WARNING **: Error setting file metadata: No such file or directory
-
-** (evince:13791): WARNING **: Error setting file metadata: No such file or directory
-
-** (evince:13791): WARNING **: Error setting file metadata: No such file or directory
-
-** (evince:13791): WARNING **: Error setting file metadata: No such file or directory
-
-** (evince:13791): WARNING **: Error setting file metadata: No such file or directory
-
-** (evince:13791): WARNING **: Error setting file metadata: No such file or directory
-
-** (evince:13791): WARNING **: Error setting file metadata: No such file or directory
-rm: cannot remove '*.aux': No such file or directory
-rm: cannot remove '*.log': No such file or directory
+(evince:18947): Gtk-WARNING **: gtk_widget_size_allocate(): attempt to allocate widget with width -81 and height 20
 rm: cannot remove '*.blg': No such file or directory
 rm: cannot remove '*.bbl': No such file or directory
 
@@ -931,6 +1039,65 @@ In write.table(MyData[1, ], file = "../Result/MyData.csv", append = TRUE) :
   appending column names to file
 
 ======================================================================
+Inspecting script file Vectorize1.py...
+
+File contents are:
+**********************************************************************
+#!/usr/bin/env Rscript
+
+"""vectorize1 written in python"""
+
+__appname__ = 'vectorize1.py'
+__author__ = 'Yuxin Qin (yq3018@imperial.ac.uk)'
+__version__ = '0.0.1'
+
+#import
+import scipy as sc
+import numpy as np
+import time
+
+#create a random matrix of 1000*1000
+M = np.matrix(np.random.rand(1000,1000))
+
+#function
+def SumAllElements(M): 
+  """sum all elements of an array"""
+  Dimensions = sc.shape(M)
+  Tot = 0
+  for i in range(Dimensions[0]):
+    for j in range(Dimensions[1]):
+      Tot = Tot + M[i,j]
+  return Tot
+
+# profiling
+start = time.time() 
+SumAllElements(M) # runs the function
+print ("SumAllElements(M) (non vectorized version) takes %f s to run." % (time.time() - start))
+
+start = time.time()
+sc.sum(M)
+print ("np.sum(M) (vectorized version) takes %f s to run." % (time.time() - start))**********************************************************************
+
+Testing Vectorize1.py...
+
+Vectorize1.py is a Python script file;
+ checking for docstrings...
+
+Found one or more doctrings!
+
+Output (only first 500 characters): 
+
+**********************************************************************
+SumAllElements(M) (non vectorized version) takes 0.966560 s to run.
+np.sum(M) (vectorized version) takes 0.000644 s to run.
+
+**********************************************************************
+
+Code ran without errors
+
+Time consumed = 1.14560s
+
+======================================================================
 Inspecting script file try.R...
 
 File contents are:
@@ -969,24 +1136,19 @@ Testing try.R...
 Output (only first 500 characters): 
 
 **********************************************************************
-[1] "Mean of this sample was: 0.236668851096697"
-[1] "Mean of this sample was: 0.333985402642602"
-[1] "Mean of this sample was: 0.271163179944288"
-[1] "Mean of this sample was: 0.175416813711856"
-[1] "Mean of this sample was: -0.0911567632495891"
-[1] "Mean of this sample was: 0.0586889753470938"
-[1] "Mean of this sample was: -0.13207338478352"
-[1] "Mean of this sample was: -0.0333735739127288"
-[1] "Mean of this sample was: -0.147838305685205"
-[1] "Mean of this sample was: -0.193882933608807"
-[1] 
+[1] "Mean of this sample was: -0.122382581243768"
+[1] "Mean of this sample was: -0.00923993922950344"
+[1] "Mean of this sample was: -0.0698781326489378"
+[1] "Mean of this sample was: -0.204332328480774"
+[1] "Mean of this sample was: -0.0934909306854418"
+[1] "Mean of this sample was: -0.166165805550388"
+[1] "Mean of this sample was: 0.0117750707651043"
+[1] "Mean of this sample was: -0.0862730612366458"
+[1] "Mean of this sample was: -0.124981689910913"
+[1] "Mean of this sample was: -0.0993062936682
 **********************************************************************
 
 Encountered error:
-Error in doit(x) : Couldn't calculate mean: too few unique points!
-Error in doit(x) : Couldn't calculate mean: too few unique points!
-Error in doit(x) : Couldn't calculate mean: too few unique points!
-Error in doit(x) : Couldn't calculate mean: too few unique points!
 Error in doit(x) : Couldn't calculate mean: too few unique points!
 Error in doit(x) : Couldn't calculate mean: too few unique points!
 Error in doit(x) : Couldn't calculate mean: too few unique points!
@@ -1055,18 +1217,18 @@ Testing apply2.R...
 Output (only first 500 characters): 
 
 **********************************************************************
-           [,1]         [,2]       [,3]        [,4]       [,5]        [,6]
- [1,] 129.30055  -77.6066073  -41.57036 -48.1003227 -1.9976843 -1.56255725
- [2,]  69.73837  155.6215947   50.10211   0.7563989 -0.9723532  0.01424484
- [3,] -47.45771 -114.5662945 -168.92758 -96.5967095 -0.3738027  0.44344541
- [4,]  33.06477  -53.9072170 -151.42008 -60.4885087 -0.9848679 -0.30584624
- [5,]  85.06245   33.0724078  155.18754  -4.2316795 -0.9972968 -2.11715076
- [6,] 184.95482  169.2600749   54.96051 -75.4738786
+            [,1]       [,2]        [,3]      [,4]       [,5]        [,6]
+ [1,] -173.06982 -0.4343624 -0.57489096 -40.66421  183.77262  119.453455
+ [2,]  -54.90270 -0.2476529 -2.52832995  27.38905   69.08773    4.448149
+ [3,]  236.13015  0.2663805 -0.14446425 116.04945  171.93093  327.899308
+ [4,]   78.18353 -0.9798365 -0.88557048 -48.02416   18.76571   95.455412
+ [5,]  -31.77460  0.9832080 -1.15431121  86.50143 -120.90399   34.788631
+ [6,]  116.59536  0.1814558 -0.19650778  90.77727 -112.44531   
 **********************************************************************
 
 Code ran without errors
 
-Time consumed = 0.09076s
+Time consumed = 0.10084s
 
 ======================================================================
 Inspecting script file get_TreeHeight.R...
@@ -1106,7 +1268,7 @@ input <- paste("../Data/", filename, sep="")
 
 # the name of the output file
 name <- unlist(strsplit(x=filename, split="\\."))[1]
-newname <- paste("../Data/", name, "_treeheights.csv", sep="")
+newname <- paste("../Result/", name, "_treeheights.csv", sep="")
 
 # read the data
 MyData <- read.csv(input)
@@ -1158,7 +1320,7 @@ load("../Data/KeyWestAnnualMeanTemperature.RData")
 
 # plot the data
 png('../Result/TAutoCorrP.png')
-plot(ats$Year, ats$Temp)
+plot(ats$Year, ats$Temp, type = "o", cex = 0.3)
 dev.off()
 
 # calculate the coefficient of keywest annual mean temperature
@@ -1191,13 +1353,13 @@ null device
 [1] "Pearson r value is"
 [1] 0.3261697
 [1] "P-value is"
-[1] 7e-04
+[1] 6e-04
 
 **********************************************************************
 
 Code ran without errors
 
-Time consumed = 0.95602s
+Time consumed = 0.86582s
 
 ======================================================================
 Inspecting script file Vectorize2.R...
@@ -1262,7 +1424,7 @@ Output (only first 500 characters):
 **********************************************************************
 [1] "Stochastic Ricker takes:"
    user  system elapsed 
-  0.240   0.000   0.237 
+  0.208   0.000   0.209 
 [1] "Vectorized Stochastic Ricker takes:"
    user  system elapsed 
   0.012   0.000   0.012 
@@ -1271,7 +1433,7 @@ Output (only first 500 characters):
 
 Code ran without errors
 
-Time consumed = 0.46737s
+Time consumed = 0.39739s
 
 ======================================================================
 Inspecting script file DataWrangTidy.R...
@@ -1415,7 +1577,7 @@ Output (only first 500 characters):
 
 Code ran without errors
 
-Time consumed = 10.00713s
+Time consumed = 10.00761s
 
 ======================================================================
 Inspecting script file PP_Regress_loc.R...
@@ -1464,7 +1626,7 @@ cal <- function(x,y) {
   return(c(intercept, slope, fvalue, rsquared,pvalue))
 }
 
-modelfit <- ddply(MyDF, c("Predator.lifestage", "Location"), summarise,
+modelfit <- ddply(MyDF, c("Type.of.feeding.interaction", "Predator.lifestage", "Location"), summarise,
                   Intercept = cal(Predator.mass, Prey.mass)[1],
                   Slope = cal(Predator.mass, Prey.mass)[2],
                   fvalue = cal(Predator.mass, Prey.mass)[3],
@@ -1483,17 +1645,7 @@ Output (only first 500 characters):
 **********************************************************************
 
 Encountered error:
-Warning messages:
-1: In anova.lm(model) :
-  ANOVA F-tests on an essentially perfect fit are unreliable
-2: In anova.lm(model) :
-  ANOVA F-tests on an essentially perfect fit are unreliable
-3: In anova.lm(model) :
-  ANOVA F-tests on an essentially perfect fit are unreliable
-4: In anova.lm(model) :
-  ANOVA F-tests on an essentially perfect fit are unreliable
-5: In anova.lm(model) :
-  ANOVA F-tests on an essentially perfect fit are unreliable
+There were 25 warnings (use warnings() to see them)
 
 ======================================================================
 Inspecting script file DataWrang.R...
@@ -1578,7 +1730,7 @@ Output (only first 500 characters):
 
 Code ran without errors
 
-Time consumed = 10.00419s
+Time consumed = 10.00773s
 
 ======================================================================
 Inspecting script file TAutoCorr.tex...
@@ -1604,7 +1756,7 @@ File contents are:
   \begin{figure}
 	\centering
 	\includegraphics[scale=.3]{../Result/TAutoCorrP.png}
-	\caption{Scatter plot of temperature in each year}
+	\caption{Plot of temperature in each year}
   \end{figure}
     
     It is unable to observe the trend of temperature by eye via the scatterpoint. 
@@ -1681,7 +1833,6 @@ Output (only first 500 characters):
 
 **********************************************************************
 [1] "a is TRUE"
-[1] "Less than a half"
 [1] "1  squared is 1"
 [1] "2  squared is 4"
 [1] "3  squared is 9"
@@ -1701,24 +1852,25 @@ Output (only first 500 characters):
 [1] "17  squared is 289"
 [1] "18  squared is 324"
 [1] "19  squared is 361"
-[1] "20 
+[1] "20  squared is 400"
+[1] "2
 **********************************************************************
 
 Code ran without errors
 
-Time consumed = 0.11599s
+Time consumed = 0.12476s
 
 ======================================================================
 ======================================================================
 Finished running scripts
 
-Ran into 9 errors
+Ran into 10 errors
 
 ======================================================================
 ======================================================================
 
 FINISHED WEEKLY ASSESSMENT
 
-Current Points for the Week = 99
+Current Points for the Week = 100
 
 NOTE THAT THESE ARE POINTS, NOT MARKS FOR THE WEEK!
