@@ -1,9 +1,15 @@
+#!/usr/bin/env Rscript
+# Author: Yuxin Qin yq3018@imperial.ac.uk
+# Script: Analysis.R
+# Description: analysis of miniproject
+# Date: Feb 2019
+
 library(plyr)
 library(ggplot2)
 library(gridExtra)
 
 # Read data
-fixeddata <- read.csv(file="~/Documents/MiniProject/Data/FixedData.csv", header=TRUE, sep=",")
+fixeddata <- read.csv(file="../Data/FixedData.csv", header=TRUE, sep=",")
 monthvector  <- c("Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec", "Jan")
 
 #community data
@@ -21,7 +27,7 @@ communitydataanalysis <-ddply(communitydata, c("treat", "month"),  function(x) {
   data.frame(mean.abundance = mean.count, sd.abundance = sd.count, mean.biomass=mean.biomass, sd.biomass = sd.biomass)
 })
 
-png("../Graph/CommunityBiomassPlot.png", height = 300, width = 600)
+png("../Graph/CommunityBiomassPlot.png", height = 200, width = 600)
 sdbimline <- aes(ymax = communitydataanalysis$mean.biomass + communitydataanalysis$sd.biomass,
                  ymin = communitydataanalysis$mean.biomass - communitydataanalysis$sd.biomass)
 ggplot(data=communitydataanalysis, aes(x=month, y=mean.biomass, fill=treat)) +
@@ -35,7 +41,7 @@ dev.off()
 ##############################################################################
 
 #generate the data to compare the powerlaw model and the downing model
-deleteddata <- read.csv(file="~/Documents/MiniProject/Data/DeleteData.csv", header=TRUE, sep=",")
+deleteddata <- read.csv(file="../Data/DeleteData.csv", header=TRUE, sep=",")
 
 datatouse <-ddply(deleteddata, c("pond", "treat", "month", "temp", "taxon"),  function(x) {
   sum.count <- sum(x$count, na.rm = true)
@@ -51,7 +57,7 @@ biomass = biomassfunction(datatouse$mean.bodymass, datatouse$abundance)
 datatouse$biomass <- biomass
 write.csv(datatouse, file = "../Data/DataToUse.csv")
 
-datatouse <- read.csv(file="~/Documents/MiniProject/Data/DataToUse.csv", header=TRUE, sep=",")
+datatouse <- read.csv(file="../Data/DataToUse.csv", header=TRUE, sep=",")
 #############################################################################
 # plot the linear regression
 plotpower <- function(inputmonth){

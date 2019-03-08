@@ -1,7 +1,13 @@
+#!/usr/bin/env Rscript
+# Author: Yuxin Qin yq3018@imperial.ac.uk
+# Script: CalculateData.R
+# Description: calculate the data in miniproject
+# Date: Feb 2019
+
 library(plyr)
 
 # Read Original data
-Originaldata <- read.csv(file="~/Documents/MiniProject/Data/RawData.csv", header=TRUE, sep=",")
+Originaldata <- read.csv(file="../Data/RawData.csv", header=TRUE, sep=",")
 
 # to check the shape name
 as.data.frame(table(Originaldata$shape, Originaldata$equation))
@@ -122,7 +128,7 @@ write.csv(Originaldata, file= "../Data/CalData.csv")
 
 ######################################################################################
 # read calculated data
-caldata <- read.csv(file="~/Documents/MiniProject/Data/CalData.csv", header=TRUE, sep=",")
+caldata <- read.csv(file="../Data/CalData.csv", header=TRUE, sep=",")
 
 # check spherical data (according to analysis I did, there is something wrong with the spherical ones)
 sph <- subset(caldata, shape == "spherical")
@@ -142,7 +148,7 @@ deleteddata <- subset(deleteddata, X != i)
 }
 write.csv(deleteddata, file= "../Data/DeleteData.csv")
 
-deleteddata <- read.csv(file="~/Documents/MiniProject/Data/DeleteData.csv", header=TRUE, sep=",")
+deleteddata <- read.csv(file="../Data/DeleteData.csv", header=TRUE, sep=",")
 
 #fixed data
 fixeddata <-ddply(deleteddata, c("pond", "treat", "month", "temp","sample", "group", "family", "genus", "species", "feeding", "taxon"),  function(x) {
