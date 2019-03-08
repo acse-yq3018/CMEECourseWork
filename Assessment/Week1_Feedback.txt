@@ -9,13 +9,13 @@ Note that:
 
 ======================================================================
 ======================================================================
-Your Git repo size this week is about 1.66 MiB on disk 
+Your Git repo size this week is about 2.09 MiB on disk 
 
 PART 1: Checking project workflow...
 
-Found the following directories in parent directory: Week1, Assessment, Week2, .git
+Found the following directories in parent directory: Week1, Week7, Assessment, Week2, Mainproject, .git, Week3
 
-Found the following files in parent directory: README.txt, .gitignore
+Found the following files in parent directory: .gitignore, README.md
 
 Checking for key files in parent directory...
 
@@ -25,20 +25,43 @@ Printing contents of .gitignore:
 **********************************************************************
 *~ 
 *.tmp
+*.Rdata
+*.Rhistory
 **********************************************************************
 
-Found README in parent directory, named: README.txt
+Found README in parent directory, named: README.md
 
-Printing contents of README.txt:
+Printing contents of README.md:
 **********************************************************************
-My CMEE Coursework Repository
-Do I like this better
+# My CMEE Coursework Repository
+
+# Week1
+ * Introduction to Unix
+ * Shell scripting
+ * LaTeX
+
+# Week2
+ * Biological computing in Python 1
+
+# Week3
+ * Biological computing in R
+ * Data management, exploration and visualization
+ 
+# Week7
+ * Biological computing in Python 2
+----------------------------------
+
+Author: Yuxin Qin (yq3018@gimperial.ac.uk)
+
+Description: This repository includes all my CMEECourseWork, including code, data and Sandbox. PLease find the detailed description of each week in README.txt of each week's directory.
+
+Date: 2018-2019
 **********************************************************************
 
 ======================================================================
 Looking for the weekly directories...
 
-Found 2 weekly directories: Week1, Week2
+Found 4 weekly directories: Week1, Week2, Week3, Week7
 
 The Week1 directory will be assessed 
 
@@ -51,18 +74,83 @@ Assessing WEEK1...
 
 Found the following directories: Code, Result, Data, Sandbox
 
-Found the following files: 
+Found the following files: README.txt
 
 Checking for readme file in weekly directory...
 
-README file missing, 1 pt deducted
+Found README in parent directory, named: README.txt
 
-Current Points = 99
+Printing contents of README.txt:
+**********************************************************************
+CMEECoursework-Week1
+Author: Yuxin Qin
 
-Found following files in results directory: .csv, REDME.txt...
-ideally, Results directory should be empty other than, perhaps, a readme. 
+Files List:
+------------------
+.
+├── Code
+│   ├── boilerplate.sh               Simple boilerplate for shell scripts
+│   ├── CompileLaTeX.sh              Create a pdf file in LaTeX and clean the meaningless files produced
+│   ├── ConcatenateTwoFiles.sh       Put two files into a file
+│   ├── CountLines.sh                Count the number of lines in a file
+│   ├── csvtospace.sh                Substitute the commas in the files with tabs
+│   ├── FirstBiblio.bib              The first Biblio created.
+│   ├── FirstExample.tex             The first LaTeX document 
+│   ├── MyExampleScript.sh           Print hello $user in the terminal
+│   ├── tabtocsv.sh                  Substitute the tabs in the files with commas and then saves the output into a .csv file
+│   ├── tiff2png.sh                  Transfer a tiff picture to jpg picture
+│   ├── UnixPrac1.txt                Unix practical answers
+│   └── variables.sh                 Show the use of variables and read multiple values
+├── Data
+│   ├── 407228326.fasta
+│   ├── 407228412.fasta
+│   ├── E.coli.fasta
+│   ├── spawannxs.txt
+│   └── Temperatures
+│       ├── 1800.csv
+│       ├── 1801.csv
+│       ├── 1802.csv
+│       └── 1803.csv
+├── Result
+│   └── REDME.txt
+└── Sandbox
+    ├── File1
+    ├── File2
+    ├── ListRootDir.txt
+    ├── TestFind
+    │   ├── Dir1
+    │   │   ├── Dir11
+    │   │   │   └── Dir111
+    │   │   │       └── File111.txt
+    │   │   ├── File1.csv
+    │   │   ├── File1.tex
+    │   │   └── File1.txt
+    │   ├── Dir2
+    │   │   ├── file2.csv
+    │   │   ├── File2.tex
+    │   │   └── File2.txt
+    │   └── Dir3
+    │       └── File3.txt
+    ├── test.txt
+    ├── TestWild
+    │   ├── Anotherfile.csv
+    │   ├── Anotherfile.txt
+    │   ├── File1.csv
+    │   ├── File1txt
+    │   ├── File2.csv
+    │   ├── File2.txt
+    │   ├── File3.csv
+    │   ├── File3.txt
+    │   ├── File4.csv
+    │   └── File4.txt
+    └── TiffSample.tiff
 
-Found 13 code files: ConcatenateTwoFiles.sh, .txt, CountLines.sh, variables.sh, CompileLaTeX.sh, tiff2png.sh, csvtospace.sh, FirstExample.tex, MyExampleScript.sh, FirstBiblio.bib, UnixPrac1.txt, tabtocsv.sh, boilerplate.sh
+
+**********************************************************************
+
+Found following files in results directory: README.txt...
+
+Found 12 code files: ConcatenateTwoFiles.sh, CountLines.sh, variables.sh, CompileLaTeX.sh, tiff2png.sh, csvtospace.sh, FirstExample.tex, MyExampleScript.sh, FirstBiblio.bib, UnixPrac1.txt, tabtocsv.sh, boilerplate.sh
 
 ======================================================================
 Testing script/code files...
@@ -102,15 +190,6 @@ Merged File is
 Encountered error:
 ConcatenateTwoFiles.sh: line 9: $3: ambiguous redirect
 ConcatenateTwoFiles.sh: line 12: $3: ambiguous redirect
-
-======================================================================
-Inspecting script file .txt...
-
-File contents are:
-**********************************************************************
-**********************************************************************
-
-Testing .txt...
 
 ======================================================================
 Inspecting script file CountLines.sh...
@@ -232,29 +311,29 @@ This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded
 Encountered error:
 mv: cannot stat '.tex.pdf': No such file or directory
 
-** (evince:27732): WARNING **: Error when getting information for file '/home/mhasoba/Documents/Teaching/IC_CMEE/2018-19/Coursework/StudentRepos/YuxinQin_YQ3018/Week1/Result/.tex.pdf': No such file or directory
+** (evince:12356): WARNING **: Error when getting information for file '/home/mhasoba/Documents/Teaching/IC_CMEE/2018-19/Coursework/StudentRepos/YuxinQin_YQ3018/Week1/Result/.tex.pdf': No such file or directory
 
-** (evince:27732): WARNING **: Error setting file metadata: No such file or directory
+** (evince:12356): WARNING **: Error setting file metadata: No such file or directory
 
-** (evince:27732): WARNING **: Error setting file metadata: No such file or directory
+** (evince:12356): WARNING **: Error setting file metadata: No such file or directory
 
-** (evince:27732): WARNING **: Error setting file metadata: No such file or directory
+** (evince:12356): WARNING **: Error setting file metadata: No such file or directory
 
-** (evince:27732): WARNING **: Error setting file metadata: No such file or directory
+** (evince:12356): WARNING **: Error setting file metadata: No such file or directory
 
-** (evince:27732): WARNING **: Error setting file metadata: No such file or directory
+** (evince:12356): WARNING **: Error setting file metadata: No such file or directory
 
-** (evince:27732): WARNING **: Error setting file metadata: No such file or directory
+** (evince:12356): WARNING **: Error setting file metadata: No such file or directory
 
-** (evince:27732): WARNING **: Error setting file metadata: No such file or directory
+** (evince:12356): WARNING **: Error setting file metadata: No such file or directory
 
-** (evince:27732): WARNING **: Error setting file metadata: No such file or directory
+** (evince:12356): WARNING **: Error setting file metadata: No such file or directory
 
-** (evince:27732): WARNING **: Error setting file metadata: No such file or directory
+** (evince:12356): WARNING **: Error setting file metadata: No such file or directory
 
-** (evince:27732): WARNING **: Error setting file metadata: No such file or directory
+** (evince:12356): WARNING **: Error setting file metadata: No such file or directory
 
-** (evince:27732): WARNING **: Error setting file metadata: No such file or directory
+** (evince:12356): WARNING **: Error setting file metadata: No such file or directory
 rm: cannot remove '*.aux': No such file or directory
 rm: cannot remove '*.log': No such file or directory
 rm: cannot remove '*.blg': No such file or directory
@@ -289,7 +368,7 @@ Output (only first 500 characters):
 
 Code ran without errors
 
-Time consumed = 0.01165s
+Time consumed = 0.00339s
 
 ======================================================================
 Inspecting script file csvtospace.sh...
@@ -321,7 +400,7 @@ Done!
 
 Code ran without errors
 
-Time consumed = 0.01578s
+Time consumed = 0.00692s
 
 ======================================================================
 Inspecting script file FirstExample.tex...
@@ -353,6 +432,7 @@ File contents are:
   \bibliographystyle{plain}
   \bibliography{FirstBiblio}
 \end{document}\grid
+\grid
 \grid
 \grid
 \grid
@@ -391,7 +471,7 @@ Hello mhasoba
 
 Code ran without errors
 
-Time consumed = 0.01858s
+Time consumed = 0.00456s
 
 ======================================================================
 Inspecting script file FirstBiblio.bib...
@@ -466,7 +546,7 @@ Done!
 
 Code ran without errors
 
-Time consumed = 0.01672s
+Time consumed = 0.00791s
 
 ======================================================================
 Inspecting script file boilerplate.sh...
@@ -500,7 +580,7 @@ This is a shell script!
 
 Code ran without errors
 
-Time consumed = 0.00602s
+Time consumed = 0.00288s
 
 ======================================================================
 ======================================================================
@@ -513,6 +593,6 @@ Ran into 4 errors
 
 FINISHED WEEKLY ASSESSMENT
 
-Current Points for the Week = 99
+Current Points for the Week = 100
 
 NOTE THAT THESE ARE POINTS, NOT MARKS FOR THE WEEK!

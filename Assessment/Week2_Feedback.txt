@@ -9,11 +9,11 @@ Note that:
 
 ======================================================================
 ======================================================================
-Your Git repo size this week is about 1.66 MiB on disk 
+Your Git repo size this week is about 2.09 MiB on disk 
 
 PART 1: Checking project workflow...
 
-Found the following directories in parent directory: Week1, Assessment, Week2, .git
+Found the following directories in parent directory: Week1, Week7, Assessment, Week2, Mainproject, .git, Week3
 
 Found the following files in parent directory: .gitignore, README.md
 
@@ -25,6 +25,8 @@ Printing contents of .gitignore:
 **********************************************************************
 *~ 
 *.tmp
+*.Rdata
+*.Rhistory
 **********************************************************************
 
 Found README in parent directory, named: README.md
@@ -39,11 +41,14 @@ Printing contents of README.md:
  * LaTeX
 
 # Week2
- * Biological computing in Python
+ * Biological computing in Python 1
 
 # Week3
  * Biological computing in R
  * Data management, exploration and visualization
+ 
+# Week7
+ * Biological computing in Python 2
 ----------------------------------
 
 Author: Yuxin Qin (yq3018@gimperial.ac.uk)
@@ -56,7 +61,7 @@ Date: 2018-2019
 ======================================================================
 Looking for the weekly directories...
 
-Found 2 weekly directories: Week1, Week2
+Found 4 weekly directories: Week1, Week2, Week3, Week7
 
 The Week2 directory will be assessed 
 
@@ -69,16 +74,59 @@ Assessing WEEK2...
 
 Found the following directories: Code, Result, Data, Sandbox
 
-Found the following files: 
+Found the following files: README.txt
 
 Checking for readme file in weekly directory...
 
-README file missing, 1 pt deducted
+Found README in parent directory, named: README.txt
 
-Current Points = 99
+Printing contents of README.txt:
+**********************************************************************
+CMEECoursework-Week2
+Author: Yuxin Qin
 
-Found following files in results directory: README.txt, best_match_AS, best_match_ASF, best_match_ASB...
-ideally, Results directory should be empty other than, perhaps, a readme. 
+Files List:
+------------------
+.
+├── Code
+│   ├── align_seqs_better.py        get all the best match DNA sequence
+│   ├── align_seqs_fasta.py         align DNA sequence using 2 external files
+│   ├── align_seqs.py               align DNA sequence using 1 external files
+│   ├── basic_csv.py                how to import and write csv in python
+│   ├── basic_io.py                 how to readlines and output lines in python
+│   ├── boilerplate.py              this is just a boilerplate
+│   ├── cfexercises1.py             clarify function of range and while
+│   ├── cfexercises2.py             clarify foo function
+│   ├── control_flow.py             Some functions exemplifying the use of control statesments
+│   ├── debugme.py                  example of debug using %pdb
+│   ├── dictionary.py               use dictionary to classify taxa
+│   ├── lc1.py                      use list comprehension and loops to extract target data
+│   ├── lc2.py                      use list comprehension and loops to extract specific range data
+│   ├── loops.py                    clarify loops
+│   ├── oaks_debugme.py             find oaks and output it
+│   ├── oaks.py                     clarify list conprhention and loops
+│   ├── scope.py                    clarify function of def
+│   ├── sysargv.py                  clarify function of sys.argv
+│   ├── test_control_flow.py        test of doctest
+│   ├── tuple.py                    print birds on separate lines  
+│   └── using_name.py               clarify the __name__ == '__main__'
+├── Data
+│   ├── 407228326.fasta
+│   ├── 407228412.fasta
+│   ├── bodymass.csv
+│   ├── infile
+│   ├── JustOaksData.csv
+│   ├── testcsv.csv
+│   └── TestOaksData.csv
+├── Result
+│   └── README.txt
+└── Sandbox
+    ├── testout.txt
+    ├── testp.p
+    └── test.txt
+**********************************************************************
+
+Found following files in results directory: README.txt...
 
 Found 21 code files: lc2.py, boilerplate.py, basic_csv.py, cfexercises2.py, align_seqs_better.py, dictionary.py, debugme.py, scope.py, cfexercises1.py, tuple.py, basic_io.py, lc1.py, oaks_debugme.py, oaks.py, loops.py, using_name.py, align_seqs.py, sysargv.py, align_seqs_fasta.py, control_flow.py, test_control_flow.py
 
@@ -154,16 +202,16 @@ Found one or more doctrings!
 Output (only first 500 characters): 
 
 **********************************************************************
-('The months more than 100mm are ', ['JAN', 'FEB', 'AUG', 'NOV', 'DEC'])
-('The months less than 50mm are ', ['MAR', 'SEP'])
-('The months more than 100mm are ', ['JAN', 'FEB', 'AUG', 'NOV', 'DEC'])
-('The months less than 50mm are ', ['MAR', 'SEP'])
+The months more than 100mm are  ['JAN', 'FEB', 'AUG', 'NOV', 'DEC']
+The months less than 50mm are  ['MAR', 'SEP']
+The months more than 100mm are  ['JAN', 'FEB', 'AUG', 'NOV', 'DEC']
+The months less than 50mm are  ['MAR', 'SEP']
 
 **********************************************************************
 
 Code ran without errors
 
-Time consumed = 0.01378s
+Time consumed = 0.02608s
 
 ======================================================================
 Inspecting script file boilerplate.py...
@@ -215,7 +263,7 @@ This is a boilerplate
 
 Code ran without errors
 
-Time consumed = 0.01468s
+Time consumed = 0.02657s
 
 ======================================================================
 Inspecting script file basic_csv.py...
@@ -272,19 +320,19 @@ Output (only first 500 characters):
 
 **********************************************************************
 ['Species', 'Infraorder', 'Family', 'Distribution', 'Body mass male (Kg)']
-('The species is', 'Species')
+The species is Species
 ['Daubentonia_madagascariensis', 'Chiromyiformes ', 'Daubentoniidae', 'Madagascar', '2.7']
-('The species is', 'Daubentonia_madagascariensis')
+The species is Daubentonia_madagascariensis
 ['Allocebus_trichotis', 'Lemuriformes', 'Cheirogaleidae', 'Madagascar', '0.1']
-('The species is', 'Allocebus_trichotis')
+The species is Allocebus_trichotis
 ['Avahi_laniger', 'Lemuriformes', 'Indridae', 'America', '1.03']
-('The species is', 'Avahi_laniger')
-['Avahi_occidentalis', 'Lemurifo
+The species is Avahi_laniger
+['Avahi_occidentalis', 'Lemuriformes', 'Indridae', 'Madagasc
 **********************************************************************
 
 Code ran without errors
 
-Time consumed = 0.01409s
+Time consumed = 0.03199s
 
 ======================================================================
 Inspecting script file cfexercises2.py...
@@ -305,14 +353,17 @@ import sys
 
 #Functions
 def foo1(x):
+    """ calculate square root of x"""
     return x ** 0.5
 
 def foo2(x, y):
+    """return the larger number"""
     if x > y:
         return x
     return y
 
 def foo3(x, y, z):
+    """ align the 3 number from the samllest one"""
     if x > y:
         tmp = y
         y = x
@@ -324,12 +375,14 @@ def foo3(x, y, z):
     return [x, y, z]
 
 def foo4(x):
+    """calculate the factorial of x"""
     result = 1
     for i in range(1, x + 1):
         result = result * i
     return result
 
 def foo5(x): # a recursive function
+    """calculate the factorial of x embeded function"""
     if x == 1:
         return 1
     return x * foo5(x - 1)
@@ -354,15 +407,10 @@ cfexercises2.py is a Python script file;
 
 Found one or more doctrings!
 
-Missing docstrings in one more functions!
-.5 pt deducted per missing docstring
-
-Current Points = 92.0
-
 Output (only first 500 characters): 
 
 **********************************************************************
-1.41421356237
+1.4142135623730951
 8
 [4, 6, 8]
 120
@@ -372,7 +420,7 @@ Output (only first 500 characters):
 
 Code ran without errors
 
-Time consumed = 0.01691s
+Time consumed = 0.02693s
 
 ======================================================================
 Inspecting script file align_seqs_better.py...
@@ -548,7 +596,7 @@ ATCGCCGGATTACGGG
 
 Code ran without errors
 
-Time consumed = 0.01710s
+Time consumed = 0.02691s
 
 ======================================================================
 Inspecting script file dictionary.py...
@@ -605,13 +653,13 @@ Found one or more doctrings!
 Output (only first 500 characters): 
 
 **********************************************************************
-{'Rodentia': set(['Peromyscus crinitus', 'Mus domesticus', 'Gerbillus henleyi', 'Cleithrionomys rutilus']), 'Afrosoricida': set(['Microgale dobsoni', 'Microgale talazaci']), 'Chiroptera': set(['Myotis lucifugus']), 'Carnivora': set(['Arctocephalus gazella', 'Lyacon pictus', 'Canis lupus'])}
+{'Afrosoricida': {'Microgale dobsoni', 'Microgale talazaci'}, 'Chiroptera': {'Myotis lucifugus'}, 'Rodentia': {'Mus domesticus', 'Peromyscus crinitus', 'Gerbillus henleyi', 'Cleithrionomys rutilus'}, 'Carnivora': {'Lyacon pictus', 'Arctocephalus gazella', 'Canis lupus'}}
 
 **********************************************************************
 
 Code ran without errors
 
-Time consumed = 0.01412s
+Time consumed = 0.03324s
 
 ======================================================================
 Inspecting script file debugme.py...
@@ -629,6 +677,7 @@ __version__ = '0.0.1'
 #################################################
 
 def createabug(x):
+    """just a function will get errors"""
     y = x**4
     z = 0.
     y = y/z
@@ -651,9 +700,9 @@ Output (only first 500 characters):
 
 Encountered error:
 Traceback (most recent call last):
-  File "debugme.py", line 17, in <module>
+  File "debugme.py", line 18, in <module>
     createabug(25)
-  File "debugme.py", line 14, in createabug
+  File "debugme.py", line 15, in createabug
     y = y/z
 ZeroDivisionError: float division by zero
 
@@ -677,6 +726,7 @@ __version__ = '0.0.1'
 _a_global = 10
 
 def a_function():
+    """just to test the code is to run global or local"""
     _a_global = 5
     _a_local = 4
     print("Inside the function, the value is ", _a_global)
@@ -693,6 +743,7 @@ print("Outside the function, the value is ", _a_global)
 _a_global = 10
 
 def a_function():
+    """just to test the code is to run global or local"""
     global _a_global
     _a_global = 5
     _a_local = 4
@@ -713,18 +764,18 @@ Found one or more doctrings!
 Output (only first 500 characters): 
 
 **********************************************************************
-('Inside the function, the value is ', 5)
-('Inside the function, the value is ', 4)
-('Outside the function, the value is ', 10)
-('Inside the function, the value is ', 5)
-('Inside the function, the value is ', 4)
-('Outside the function, the value is', 5)
+Inside the function, the value is  5
+Inside the function, the value is  4
+Outside the function, the value is  10
+Inside the function, the value is  5
+Inside the function, the value is  4
+Outside the function, the value is 5
 
 **********************************************************************
 
 Code ran without errors
 
-Time consumed = 0.01724s
+Time consumed = 0.02627s
 
 ======================================================================
 Inspecting script file cfexercises1.py...
@@ -819,7 +870,7 @@ hello
 
 Code ran without errors
 
-Time consumed = 0.01264s
+Time consumed = 0.02713s
 
 ======================================================================
 Inspecting script file tuple.py...
@@ -875,7 +926,7 @@ Output (only first 500 characters):
 
 Code ran without errors
 
-Time consumed = 0.01402s
+Time consumed = 0.02968s
 
 ======================================================================
 Inspecting script file basic_io.py...
@@ -990,7 +1041,7 @@ Fourth Line
 
 Code ran without errors
 
-Time consumed = 0.01771s
+Time consumed = 0.03894s
 
 ======================================================================
 Inspecting script file lc1.py...
@@ -1059,16 +1110,16 @@ Found one or more doctrings!
 Output (only first 500 characters): 
 
 **********************************************************************
-('The latin names are ', ['Passerculus sandwichensis', 'Delichon urbica', 'Junco phaeonotus', 'Junco hyemalis', 'Tachycineata bicolor'])
-('The common names are ', ['Savannah sparrow', 'House martin', 'Yellow-eyed junco', 'Dark-eyed junco', 'Tree swallow'])
-('The BodyMass names are ', [18.7, 19, 19.5, 19.6, 20.2])
-('The latin names are ', ['Passerculus sandwichensis', 'Delichon urbica', 'Junco phaeonotus', 'Junco hyemalis', 'Tachycineata bicolor'])
-('The common names are ', ['Savannah sparrow', 'H
+The latin names are  ['Passerculus sandwichensis', 'Delichon urbica', 'Junco phaeonotus', 'Junco hyemalis', 'Tachycineata bicolor']
+The common names are  ['Savannah sparrow', 'House martin', 'Yellow-eyed junco', 'Dark-eyed junco', 'Tree swallow']
+The BodyMass names are  [18.7, 19, 19.5, 19.6, 20.2]
+The latin names are  ['Passerculus sandwichensis', 'Delichon urbica', 'Junco phaeonotus', 'Junco hyemalis', 'Tachycineata bicolor']
+The common names are  ['Savannah sparrow', 'House martin', 'Yellow-ey
 **********************************************************************
 
 Code ran without errors
 
-Time consumed = 0.01457s
+Time consumed = 0.02888s
 
 ======================================================================
 Inspecting script file oaks_debugme.py...
@@ -1105,8 +1156,9 @@ def is_an_oak(name):
 
 # Define the main function
 def main(argv):
+    """write all the oaks into a csv"""
     f = open('../Data/TestOaksData.csv','r')
-    g = open('../Data/JustOaksData.csv','w')
+    g = open('../Result/JustOaksData.csv','w')
     
     taxa = csv.reader(f)
     next(taxa) # Start reading the csv from the second line
@@ -1132,7 +1184,8 @@ doctest.testmod()
 # Check status and exit
 if (__name__ == "__main__"):
     status = main(sys.argv)
-    sys.exit(status)**********************************************************************
+    sys.exit(status)
+**********************************************************************
 
 Testing oaks_debugme.py...
 
@@ -1174,7 +1227,7 @@ FOUND AN OAK!
 
 Code ran without errors
 
-Time consumed = 0.05687s
+Time consumed = 0.07648s
 
 ======================================================================
 Inspecting script file oaks.py...
@@ -1201,6 +1254,7 @@ taxa = [ 'Quercus robur',
        ]
 
 def is_an_oak(name):
+        """define quercus is an oak"""
     return name.lower().startswith('quercus ')
 
 ##Using for loops
@@ -1235,16 +1289,14 @@ Found one or more doctrings!
 Output (only first 500 characters): 
 
 **********************************************************************
-set(['Quercus robur', 'Quercus cerris', 'Quercus petraea'])
-set(['Quercus robur', 'Quercus cerris', 'Quercus petraea'])
-set(['QUERCUS ROBUR', 'QUERCUS CERRIS', 'QUERCUS PETRAEA'])
-set(['QUERCUS ROBUR', 'QUERCUS CERRIS', 'QUERCUS PETRAEA'])
 
 **********************************************************************
 
-Code ran without errors
-
-Time consumed = 0.01478s
+Encountered error:
+  File "oaks.py", line 22
+    return name.lower().startswith('quercus ')
+                                             ^
+IndentationError: unindent does not match any outer indentation level
 
 ======================================================================
 Inspecting script file loops.py...
@@ -1420,7 +1472,7 @@ GERONIMO! infinite loop! ctrl+c
 
 Code ran without errors
 
-Time consumed = 10.60086s
+Time consumed = 10.24691s
 
 ======================================================================
 Inspecting script file using_name.py...
@@ -1457,7 +1509,7 @@ This program is being run by itself
 
 Code ran without errors
 
-Time consumed = 0.07759s
+Time consumed = 0.06889s
 
 ======================================================================
 Inspecting script file align_seqs.py...
@@ -1620,7 +1672,7 @@ ATCGCCGGATTACGGG
 
 Code ran without errors
 
-Time consumed = 0.06838s
+Time consumed = 0.05248s
 
 ======================================================================
 Inspecting script file sysargv.py...
@@ -1652,15 +1704,15 @@ Found one or more doctrings!
 Output (only first 500 characters): 
 
 **********************************************************************
-('This is the name of the script: ', 'sysargv.py')
-('Number of arguments: ', 1)
-('The arguments are: ', "['sysargv.py']")
+This is the name of the script:  sysargv.py
+Number of arguments:  1
+The arguments are:  ['sysargv.py']
 
 **********************************************************************
 
 Code ran without errors
 
-Time consumed = 0.01304s
+Time consumed = 0.02931s
 
 ======================================================================
 Inspecting script file align_seqs_fasta.py...
@@ -1780,7 +1832,7 @@ Output (only first 500 characters):
 
 Code ran without errors
 
-Time consumed = 2.28129s
+Time consumed = 3.49789s
 
 ======================================================================
 Inspecting script file control_flow.py...
@@ -1845,6 +1897,7 @@ def find_all_primes(x=22):
     return allprimes
 
 def main(argv):
+    """test functions"""
     print(even_or_odd(22))
     print(even_or_odd(33))
     print(largest_divisor_five(120))
@@ -1895,7 +1948,7 @@ True
 
 Code ran without errors
 
-Time consumed = 0.01480s
+Time consumed = 0.03381s
 
 ======================================================================
 Inspecting script file test_control_flow.py...
@@ -1967,19 +2020,19 @@ Output (only first 500 characters):
 
 Code ran without errors
 
-Time consumed = 0.04852s
+Time consumed = 0.06504s
 
 ======================================================================
 ======================================================================
 Finished running scripts
 
-Ran into 1 errors
+Ran into 2 errors
 
 ======================================================================
 ======================================================================
 
 FINISHED WEEKLY ASSESSMENT
 
-Current Points for the Week = 92.0
+Current Points for the Week = 100
 
 NOTE THAT THESE ARE POINTS, NOT MARKS FOR THE WEEK!
