@@ -7,38 +7,9 @@
 library(plyr)
 library(ggplot2)
 library(gridExtra)
+library(grid)
 
-# Read data
-fixeddata <- read.csv(file="../Data/FixedData.csv", header=TRUE, sep=",")
 monthvector  <- c("Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec", "Jan")
-
-#community data
-communitydata <-ddply(fixeddata, c("pond", "treat", "month"),  function(x) {
-  sum.count <- sum(x$abundance, na.rm = true)
-  sum.biomass= sum(x$biomass)
-  data.frame(community.abundance = sum.count, community.biomass=sum.biomass)
-})
-
-communitydataanalysis <-ddply(communitydata, c("treat", "month"),  function(x) {
-  mean.count <- mean(x$community.abundance)
-  sd.count <- sd(x$community.abundance, na.rm = FALSE)
-  mean.biomass <- mean(x$community.biomass)
-  sd.biomass <- sd(x$community.biomass, na.rm = FALSE)
-  data.frame(mean.abundance = mean.count, sd.abundance = sd.count, mean.biomass=mean.biomass, sd.biomass = sd.biomass)
-})
-
-png("../Graph/CommunityBiomassPlot.png", height = 200, width = 600)
-sdbimline <- aes(ymax = communitydataanalysis$mean.biomass + communitydataanalysis$sd.biomass,
-                 ymin = communitydataanalysis$mean.biomass - communitydataanalysis$sd.biomass)
-ggplot(data=communitydataanalysis, aes(x=month, y=mean.biomass, fill=treat)) +
-  geom_bar(stat="identity", position=position_dodge(0.9)) +
-  geom_errorbar(sdbimline, position = position_dodge(0.9), width = 0.25, color = "grey")+
-  scale_fill_manual("treat", values = c("Cold" = "dodgerblue2", "Warm" = "coral2")) + 
-  theme_minimal() +
-  scale_x_discrete(limits = monthvector)
-dev.off()
-
-##############################################################################
 
 #generate the data to compare the powerlaw model and the downing model
 deleteddata <- read.csv(file="../Data/DeleteData.csv", header=TRUE, sep=",")
@@ -60,66 +31,38 @@ write.csv(datatouse, file = "../Data/DataToUse.csv")
 datatouse <- read.csv(file="../Data/DataToUse.csv", header=TRUE, sep=",")
 #############################################################################
 # plot the linear regression
-plotpower <- function(inputmonth){
-  warm <- subset(datatouse, treat == "Warm" & month == inputmonth)
-  cold <- subset(datatouse, treat == "Cold" & month == inputmonth)
-  ggplot() + 
-    geom_point(data = warm, aes(log(mean.bodymass),log(abundance)), colour = "coral2") + 
-    geom_point(data = cold, aes(log(mean.bodymass),log(abundance)), colour = "dodgerblue2") +
-    stat_smooth(data = warm, aes(log(mean.bodymass),log(abundance)),method = "lm", colour = "coral2") +
-    stat_smooth(data = cold, aes(log(mean.bodymass),log(abundance)),method = "lm", colour = "dodgerblue2") +
-    labs(x="log(bodymass)",y="log(abundance)") +
-    ggtitle(inputmonth)+
-    theme(plot.title = element_text(hjust = 0.5))
-}
-plotpowerall <- lapply(monthvector, plotpower)
-png("../Graph/as12l.png", height = 1200, width= 1000)
-grid.arrange(grobs = plotpowerall, ncol=3, nrow =4)
+
+
+pdf("../Graph/as12l.pdf")
+ggplot(datatouse, aes(log(mean.bodymass), log(abundance), color = treat)) +
+  geom_point(size= 0.2)+ 
+  stat_smooth(method = "lm") + 
+  labs(x= "log(bodymass)")+
+  facet_wrap(~factor(month, levels = monthvector), ncol = 3)
 dev.off()
 
-#predicted and actual data
-powerpredict <- function(inputmonth){
-  warm <- subset(datatouse, treat == "Warm" & month == inputmonth)
-  cold <- subset(datatouse, treat == "Cold" & month == inputmonth)
-  warmfit <- lm(log(abundance) ~log(biomass), data = warm )
-  coldfit <- lm(log(abundance) ~log(biomass) + temp, data = cold )
-  warm$predict <- fitted(warmfit)
-  cold$predict <- fitted(coldfit)
-  ggplot() + 
-    geom_point(data = warm, aes(predict,log(abundance)), colour = "coral2") + 
-    geom_point(data = cold, aes(predict,log(abundance)), colour = "dodgerblue2") +
-    labs(x="Predicted log(abundance)",y="Observed log(abundance)") +
-    geom_abline(intercept = 0, slope = 1, color="black",linetype="dashed", size=0.5)+
-    ggtitle(inputmonth)+
-    theme(plot.title = element_text(hjust = 0.5))
-}
+# plot observe and predict data of PL model
+fitpl <- lm(log(abundance) ~log(biomass), data = datatouse )
+datatouse$predict <- fitted(fitpl)
 
-ppall <- lapply(monthvector, powerpredict)
-png("../Graph/as12op.png", height = 1200, width= 1000)
-grid.arrange(grobs = ppall, ncol=3, nrow =4)
+pdf("../Graph/as12op.pdf",6,6)
+ggplot(datatouse, aes(predict, log(abundance), color = treat)) +
+  geom_point(size = 0.2)+ 
+  labs(x="Predicted log(abundance)",y="Observed log(abundance)") +
+  facet_wrap(~factor(month, levels = monthvector), ncol = 3) 
+#  geom_abline(intercept = rep(0,12), slope = rep(1,12),color="black",linetype="dashed", size=0.3)
 dev.off()
 
-downingpredict <- function(inputmonth){
-  warm <- subset(datatouse, treat == "Warm" & month == inputmonth)
-  cold <- subset(datatouse, treat == "Cold" & month == inputmonth)
-  warmfit <- lm(log(abundance) ~log(biomass) +log(max.bodymass) + temp, data = warm )
-  coldfit <- lm(log(abundance) ~log(biomass) +log(max.bodymass) + temp, data = cold )
-  warm$predict <- fitted(warmfit)
-  cold$predict <- fitted(coldfit)
-  ggplot() + 
-    geom_point(data = warm, aes(predict,log(abundance)), colour = "coral2") + 
-    geom_point(data = cold, aes(predict,log(abundance)), colour = "dodgerblue2") +
-    geom_abline(intercept = 0, slope = 1, color="black",linetype="dashed", size=0.5)+
-    labs(x="Predicted log(abundance)",y="Observed log(abundance)") +
-    ggtitle(inputmonth)+
-    theme(plot.title = element_text(hjust = 0.5))
-}
-
-dpall <- lapply(monthvector, downingpredict)
-png("../Graph/pd12l.png", height = 1200, width= 1000)
-grid.arrange(grobs = dpall, ncol=3, nrow =4)
+# plot observe and predict data of PD model
+fitpd <- lm(log(abundance) ~log(biomass) + log(max.bodymass) + temp, data = datatouse )
+datatouse$predict <- fitted(fitpd)
+pdf("../Graph/pd12l.pdf", 6, 6)
+ggplot(datatouse, aes(predict, log(abundance), color = treat)) +
+  geom_point(size= 0.2)+ 
+#  geom_abline(intercept = rep(0,12), slope = rep(1,12),color="black",linetype="dashed", size=0.5)+
+  labs(x="Predicted log(abundance)",y="Observed log(abundance)") +
+  facet_wrap(~factor(month, levels = monthvector), ncol = 3)
 dev.off()
-
 ######################################################
 # function to write the model coefficient
 powercoef <- function(inputtreat, inputmonth){
@@ -142,17 +85,20 @@ for(i in monthvector){powercoefcold <- rbind(powercoefcold, c(powercoef("Cold", 
 colnames(powercoefcold) <- c("Intercept", "log.bodymass")
 rownames(powercoefcold) <- monthvector
 
+
 p1 <-tableGrob(powercoefwarm)
 p2 <-tableGrob(powercoefcold)
-png("../Graph/ascoef.png", height = 300, width= 600)
+pdf("../Graph/ascoef.pdf", 8, 4)
 grid.arrange(p1, p2, ncol=2, nrow =1)
 dev.off()
 
-png("../Graph/ascoefplot.png", height = 200, width= 600)
+
+pdf("../Graph/ascoefplot.pdf", 7,3)
 ggplot() + 
   geom_point(data = powercoefwarm, aes(monthvector,powercoefwarm$log.bodymass), colour = "coral2") + 
   geom_point(data = powercoefcold, aes(monthvector,powercoefcold$log.bodymass), colour = "dodgerblue2") +
-  labs(x="month",y="slope")
+  labs(x="month",y="slope")+
+  scale_x_discrete(limits = monthvector)
 dev.off()
 
 downingcoefwarm <-data.frame()
@@ -167,7 +113,7 @@ rownames(downingcoefcold) <- monthvector
 
 d1 <-tableGrob(downingcoefwarm)
 d2 <-tableGrob(downingcoefcold)
-png("../Graph/pdcoef.png", height = 600, width= 700)
+pdf("../Graph/pdcoef.pdf", 8,8)
 grid.arrange(d1, d2, ncol=1, nrow =2)
 dev.off()
 
@@ -209,14 +155,14 @@ paictable <- data.frame(powerwarmallaic, powercoldallaic)
 colnames(paictable) <- c("warm AIC", "cold AIC")
 rownames(paictable) <- monthvector
 
+
 daictable <- data.frame(downingwarmallaic, downingcoldallaic)
 colnames(daictable) <- c("warm AIC", "cold AIC")
 rownames(daictable) <- monthvector
 
-
 aic1 <-tableGrob(paictable)
 aic2 <-tableGrob(daictable)
-png("../Graph/aic.png", height = 300, width= 600)
+pdf("../Graph/aic.pdf", 8,4)
 grid.arrange(aic1, aic2, ncol=2, nrow =1)
 dev.off()
 

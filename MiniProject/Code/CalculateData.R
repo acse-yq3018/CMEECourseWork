@@ -140,6 +140,7 @@ lengthwidth = checksphfunction(sph$length, sph$width)
 sph$lengthminuswidth <- lengthwidth
 suspect <- subset(sph, lengthminuswidth > 50)
 xtodelete <- as.vector(suspect$X)
+length(xtodelete)
 
 #delete the abnormal data
 deleteddata <- caldata
