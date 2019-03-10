@@ -12,7 +12,8 @@ Rscript anovafigure.R
 
 ## Create a pdf file
 pdflatex miniproject.tex
-bibtex minbib.bib
+pdflatex miniproject.tex
+bibtex miniproject
 pdflatex miniproject.tex
 pdflatex miniproject.tex
 mv miniproject.pdf ../Report
